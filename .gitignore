@@ -1,0 +1,6 @@
+/target/**
+/.settings/
+/.classpath
+/.project
+/LineTest.svg
+/SvgPuginTest.svg

@@ -1,0 +1,8 @@
+ org.openmap4u.plugin.interpolate.InterpolateDouble
+ org.openmap4u.plugin.interpolate.InterpolateFloat
+ org.openmap4u.plugin.interpolate.InterpolateLong
+ org.openmap4u.plugin.interpolate.InterpolateInteger
+ org.openmap4u.plugin.interpolate.InterpolateColor
+ org.openmap4u.plugin.interpolate.InterpolateLocalDate
+ org.openmap4u.plugin.interpolate.InterpolateLocalDateTime 
+ 
