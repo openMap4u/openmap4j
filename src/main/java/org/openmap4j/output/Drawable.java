@@ -137,22 +137,75 @@ interface Drawable extends Plugable, StyleableConsumer<Drawable>, SymbolizeableC
 	 */
 	Drawable style(TextStyleable textStyle);
 
+	/**
+	 * Draws a point symbolized as area.
+	 * 
+	 * @param area
+	 *            The area.
+	 * @param x
+	 *            The x point coordinate.
+	 * @param y
+	 *            The y point coordinate.
+	 * @param optionalParams
+	 *            The optional parameters (style, transformation, ...).
+	 * @return The fluent builder pattern.
+	 */
 	Drawable draw(Area area, double x, double y, Object... optionalParams);
 
+	/**
+	 * Draws a point symbolized as image.
+	 * 
+	 * @param image
+	 *            The {@link java.nio.file.Path} path to the image.
+	 * @param x
+	 *            The x point coordinate.
+	 * @param y
+	 *            The y point coordinate.
+	 * @param optionalParams
+	 *            The optional parameters (style, transformation, ...).
+	 * @return The fluent builder pattern.
+	 */
 	Drawable draw(Path image, double x, double y, Object... optionalParams);
 
+	/**
+	 * Draws a point symbolized as line.
+	 * 
+	 * @param line
+	 *            The line symbol.
+	 * @param x
+	 *            The x point coordinate.
+	 * @param y
+	 *            The y point coordinate.
+	 * @param optionalParams
+	 *            The optional parameters (style, transformation, ...).
+	 * @return The fluent builder pattern.
+	 */
 	Drawable draw(Shape line, double x, double y, Object... optionalParams);
 
+	/**
+	 * Draws a point symbolizes as text.
+	 * @param text The text symbol.
+	 * @param x
+	 *            The x point coordinate.
+	 * @param y
+	 *            The y point coordinate.
+	 * @param optionalParams
+	 *            The optional parameters (style, transformation, ...).
+	 * @return The fluent builder pattern.
+	 */
 	Drawable draw(String text, double x, double y, Object... optionalParams);
 
 	/**
 	 * Parses the optional parameters.
-	 * @param type The type of the style.
-	 * @param optionalParams The optional parameters to be parsed.
+	 * 
+	 * @param type
+	 *            The type of the style.
+	 * @param optionalParams
+	 *            The optional parameters to be parsed.
 	 * @return The result in an way that it can be easily processed further.
 	 */
 	default <S extends Styleable> Optional<Paramatrizeable<S>> parse(Class<S> type, Object... optionalParams) {
-		if (  optionalParams.length==0) {
+		if (optionalParams.length == 0) {
 			return Optional.empty();
 		} else {
 			Parameters<S> params = new Parameters<>();

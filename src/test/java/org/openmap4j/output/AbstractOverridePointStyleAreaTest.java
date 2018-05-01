@@ -43,8 +43,6 @@ package org.openmap4j.output;
 import java.awt.Color;
 import java.awt.geom.Rectangle2D;
 
-import org.junit.jupiter.params.ParameterizedTest;
-import org.junit.jupiter.params.provider.MethodSource;
 import org.openmap4j.builder.style.StyleBuilderFactory;
 import org.openmap4j.mock.MockValue;
 import org.openmap4j.style.Symbolizeable;
